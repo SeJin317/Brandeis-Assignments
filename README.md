@@ -10,4 +10,22 @@
 
 ### Creating a Virtual Environment
 
+```bash
+# Navigate to your project directory
+cd path/to/your/project
 
+# Create a virtual environment named 'env'
+python -m venv env
+
+# Activate the virtual environment
+# On Windows
+.\env\Scripts\activate
+# On macOS and Linux
+source env/bin/activate
+
+pip install torch torchvision
+
+python CV_HW1_part1_Sejin Kim.py
+
+
+Remember to replace placeholders (like `path/to/your/project`, `your_script_name.py`, and `XX%`) with the actual values relevant to your project. This README.md template provides a structured way to document your project for others to understand and replicate your setup and findings.
