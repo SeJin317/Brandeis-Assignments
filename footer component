@@ -1,21 +1,56 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import './Footer.css';
+const FooterContainer = styled.footer`
+  background-color: navy;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+`;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1180px) {
+    width: 100%;
+    overflow-x: auto;
+  }
+`;
+
+const SocialLinks = styled.div`
+  a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <span className="text-muted">Contact Us: (123) 456-7890</span>
-        <div className="social-links">
+    <FooterContainer>
+      <Container>
+        <span>Contact Us: (123) 456-7890</span>
+        <SocialLinks>
           {/* Link your social media profiles */}
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
           {/* Add more social links as needed */}
-        </div>
-      </div>
-    </footer>
+        </SocialLinks>
+      </Container>
+    </FooterContainer>
   );
 };
 
